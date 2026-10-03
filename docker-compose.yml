@@ -1,0 +1,9 @@
+services:
+  monitoring:
+    build: .
+    volumes:
+      - monitor_log:/var/log:ro
+    ports:
+      - "8080:80"
+volumes:
+  monitor_log:
